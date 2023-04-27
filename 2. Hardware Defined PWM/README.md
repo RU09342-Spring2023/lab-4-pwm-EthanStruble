@@ -14,6 +14,3 @@ You need to cover colors in between them, meaning as you transition from Red to 
 
 ## Deliverables
 You will need to upload the .c file and a README explaining your code and any design decisions made.
-
-# README
-![image](https://user-images.githubusercontent.com/113445493/234737332-81262112-a2d6-4f18-aba3-3ce1d637e8bb.png)
