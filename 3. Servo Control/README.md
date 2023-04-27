@@ -20,4 +20,6 @@ Similar to the main function, this is pretty standard initialization of button P
 ## TimerInit
 For the timer I used the SMCLK this allows me to use a higher frequency compared to the ACLK. Then I cleared out the CCR1 so its value is zero. Then I set a hard limit using CCR0 at 20,000 then had a duty cycle starting at 1,500 this will be used to move the servo left and right. CCR0 will be used to make sure the servo does exceed its max limits
 ![image](https://user-images.githubusercontent.com/113445493/234756724-0e1b2ed6-9533-409e-b74c-40b7673a0f81.png)
-
+## Interrupts
+These interrupts allow the Servo to move left and right. The interrupt for Port 2 is controlled using button P2.3 this port moves the servo to the left by subtracting the values from CCR1 thus lowering its. Then it's stopped when it hits its hard limit set by CCR1 this prevents the servo from turning too much causing drastic issues. The interrupt for port 4 is about the same as port 2 but it moves the servo to the right by adding values to the duty cycle, other than that they are the same. 
+![image](https://user-images.githubusercontent.com/113445493/234757706-37abbe33-bcdf-49ad-b30d-19b0749dfcd6.png)
