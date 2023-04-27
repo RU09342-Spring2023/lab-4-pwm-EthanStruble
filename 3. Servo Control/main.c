@@ -60,7 +60,7 @@ __interrupt void Port_2(void)
 {
     P2IFG &= ~BIT3;                         // Clearing P2.3 interrupt
     if(TB3CCR1 >= 1000)
-        TB3CCR1 -= 100;                     // decreasing the duty cycle by 5%
+        TB3CCR1 -= 100;                     // decreasing the duty cycle by 10%
     else
         TB3CCR1 = TB3CCR1;                  // Hard stop
 }
@@ -70,7 +70,7 @@ __interrupt void Port_4(void)
 {
     P4IFG &= ~BIT1;                         // Clearing P4.1 interrupt
     if(TB3CCR1 <= 1000)
-        TB3CCR1 += 100;                     // increasing the duty cycle by 5%
+        TB3CCR1 += 100;                     // increasing the duty cycle by 10%
     else
         TB3CCR1 = TB3CCR1;                  //Hard stop
 }
