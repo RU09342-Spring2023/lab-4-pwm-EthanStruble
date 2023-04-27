@@ -16,3 +16,5 @@ This initalizes all of the pins we used for our program. All three of the pins a
 ## TimerInit
 This timer is used to fade in between all of the RGB values each color depends on how much of red green or blue there is at a given time. So first couple of lines of code sets the limit of TB3CCR0 to a max value of 999, this is because the max value a give RBG color can be set to is 999. Then there are reset conditions for all of the CCR values so we know we start off at red. Next I set the intial conditions for the RBG values. I want to start at the max for red which is 999 and I only want red so the other values are set to 0. Final I have the second timer that I use, this actually does the fading. I have it set so it can cause interupts to happen and it causes an interupt every second. For the clock singal I used the ACLK and set it to its highest value by using 8 clock dividers, I also had enabled interrupt.
 ![image](https://user-images.githubusercontent.com/113445493/234744529-64e37d45-60fd-4f0a-88f9-f2add79a25da.png)
+## Interrupts
+
